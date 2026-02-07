@@ -45,3 +45,7 @@ function addSampleEvents() {
         eventList.appendChild(div);
     });
 }
+function removeEmptyText() {
+    const empty = document.querySelector(".empty");
+    if (empty) empty.remove();
+}
