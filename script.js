@@ -27,3 +27,21 @@ function addEvent() {
 function clearEvents() {
     eventList.innerHTML = `<p class="empty">No events yet. Add your first event!</p>`;
 }
+function addSampleEvents() {
+    clearEvents();
+    const samples = [
+        { t: "Tech Conference", d: "2026-03-10", c: "Conference" },
+        { t: "Web Workshop", d: "2026-03-15", c: "Workshop" }
+    ];
+
+    samples.forEach(e => {
+        const div = document.createElement("div");
+        div.className = "event";
+        div.innerHTML = `
+            <strong>${e.t}</strong><br>
+            ${e.d} | ${e.c}
+        `;
+        removeEmptyText();
+        eventList.appendChild(div);
+    });
+}
