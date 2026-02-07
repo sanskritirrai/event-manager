@@ -24,3 +24,6 @@ function addEvent() {
     document.getElementById("date").value = "";
     document.getElementById("description").value = "";
 }
+function clearEvents() {
+    eventList.innerHTML = `<p class="empty">No events yet. Add your first event!</p>`;
+}
