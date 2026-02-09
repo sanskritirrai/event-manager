@@ -13,6 +13,7 @@ function addEvent() {
     const div = document.createElement("div");
     div.className = "event";
     div.innerHTML = `
+        <span class="delete-btn" onclick="this.parentElement.remove()">❌</span>
         <strong>${title}</strong><br>
         ${date} | ${category}<br>
         <small>${description}</small>
@@ -24,9 +25,11 @@ function addEvent() {
     document.getElementById("date").value = "";
     document.getElementById("description").value = "";
 }
+
 function clearEvents() {
     eventList.innerHTML = `<p class="empty">No events yet. Add your first event!</p>`;
 }
+
 function addSampleEvents() {
     clearEvents();
     const samples = [
@@ -38,6 +41,7 @@ function addSampleEvents() {
         const div = document.createElement("div");
         div.className = "event";
         div.innerHTML = `
+            <span class="delete-btn" onclick="this.parentElement.remove()">❌</span>
             <strong>${e.t}</strong><br>
             ${e.d} | ${e.c}
         `;
@@ -45,6 +49,7 @@ function addSampleEvents() {
         eventList.appendChild(div);
     });
 }
+
 function removeEmptyText() {
     const empty = document.querySelector(".empty");
     if (empty) empty.remove();
