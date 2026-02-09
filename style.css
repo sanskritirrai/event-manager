@@ -105,3 +105,16 @@ pre {
     border-radius: 8px;
     overflow-x: auto;
 }
+.event {
+    position: relative;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: crimson;
+}
+
